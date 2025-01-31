@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **is_taxes_paid** | **bool** | Please provide if the Taxes is paid for the line item | [optional] 
 **customer_references** | [**list[SupermodelIoLogisticsExpressExportDeclarationCustomerReferences]**](SupermodelIoLogisticsExpressExportDeclarationCustomerReferences.md) | Please provide the Customer References for the line item | [optional] 
 **customs_documents** | [**list[SupermodelIoLogisticsExpressExportDeclarationCustomsDocuments]**](SupermodelIoLogisticsExpressExportDeclarationCustomsDocuments.md) | Please provide the customs documents details | [optional] 
+**pre_calculated_line_item_total_value** | **float** | Please provide monetary value of the line item x quantity | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

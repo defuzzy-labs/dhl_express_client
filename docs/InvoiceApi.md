@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**exp_api_shipments_invoice_data**](InvoiceApi.md#exp_api_shipments_invoice_data) | **POST** /invoices/upload-invoice-data | Upload Commercial invoice data
 
 # **exp_api_shipments_invoice_data**
-> SupermodelIoLogisticsExpressUploadInvoiceDataResponse exp_api_shipments_invoice_data(body, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+> SupermodelIoLogisticsExpressUploadInvoiceDataResponse exp_api_shipments_invoice_data(body, x_version, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
 
 Upload Commercial invoice data
 
@@ -28,6 +28,7 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = swagger_client.InvoiceApi(swagger_client.ApiClient(configuration))
 body = swagger_client.SupermodelIoLogisticsExpressUploadInvoiceDataRequestSID() # SupermodelIoLogisticsExpressUploadInvoiceDataRequestSID | Details about the Commercial Invoice data to be uploaded
+x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 message_reference = 'message_reference_example' # str | Please provide message reference  (optional)
 message_reference_date = 'message_reference_date_example' # str | Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 (optional)
 plugin_name = 'plugin_name_example' # str | Please provide name of the plugin (applicable to 3PV only)  (optional)
@@ -39,7 +40,7 @@ webstore_platform_version = 'webstore_platform_version_example' # str | Please p
 
 try:
     # Upload Commercial invoice data
-    api_response = api_instance.exp_api_shipments_invoice_data(body, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+    api_response = api_instance.exp_api_shipments_invoice_data(body, x_version, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InvoiceApi->exp_api_shipments_invoice_data: %s\n" % e)
@@ -50,6 +51,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**SupermodelIoLogisticsExpressUploadInvoiceDataRequestSID**](SupermodelIoLogisticsExpressUploadInvoiceDataRequestSID.md)| Details about the Commercial Invoice data to be uploaded | 
+ **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **message_reference** | **str**| Please provide message reference  | [optional] 
  **message_reference_date** | **str**| Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 | [optional] 
  **plugin_name** | **str**| Please provide name of the plugin (applicable to 3PV only)  | [optional] 

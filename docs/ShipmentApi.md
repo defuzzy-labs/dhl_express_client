@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**exp_api_shipments_invoice_data_awb**](ShipmentApi.md#exp_api_shipments_invoice_data_awb) | **PATCH** /shipments/{shipmentTrackingNumber}/upload-invoice-data | Upload Commercial Invoice data for your DHL Express shipment
 
 # **exp_api_shipments**
-> SupermodelIoLogisticsExpressCreateShipmentResponse exp_api_shipments(body, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation, bypass_plt_error=bypass_plt_error)
+> SupermodelIoLogisticsExpressCreateShipmentResponse exp_api_shipments(body, x_version, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation, bypass_plt_error=bypass_plt_error, validate_data_only=validate_data_only)
 
 Create Shipment
 
@@ -32,6 +32,7 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = swagger_client.ShipmentApi(swagger_client.ApiClient(configuration))
 body = swagger_client.SupermodelIoLogisticsExpressCreateShipmentRequest() # SupermodelIoLogisticsExpressCreateShipmentRequest | Details about the shipment to be created
+x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 message_reference = 'message_reference_example' # str | Please provide message reference  (optional)
 message_reference_date = 'message_reference_date_example' # str | Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 (optional)
 plugin_name = 'plugin_name_example' # str | Please provide name of the plugin (applicable to 3PV only)  (optional)
@@ -42,10 +43,11 @@ webstore_platform_name = 'webstore_platform_name_example' # str | Please provide
 webstore_platform_version = 'webstore_platform_version_example' # str | Please provide version of the webstore platform (applicable to 3PV only)  (optional)
 strict_validation = false # bool | If set to true, indicate strict DCT validation of address details, and validation of product and service(s) combination provided in request. (optional) (default to false)
 bypass_plt_error = true # bool | Option to bypass PLT - WY service code lane capability validation  (optional)
+validate_data_only = false # bool | If set to true, indicate to perform shipment data compliant validation on the shipment information. (optional) (default to false)
 
 try:
     # Create Shipment
-    api_response = api_instance.exp_api_shipments(body, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation, bypass_plt_error=bypass_plt_error)
+    api_response = api_instance.exp_api_shipments(body, x_version, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation, bypass_plt_error=bypass_plt_error, validate_data_only=validate_data_only)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ShipmentApi->exp_api_shipments: %s\n" % e)
@@ -56,6 +58,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**SupermodelIoLogisticsExpressCreateShipmentRequest**](SupermodelIoLogisticsExpressCreateShipmentRequest.md)| Details about the shipment to be created | 
+ **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **message_reference** | **str**| Please provide message reference  | [optional] 
  **message_reference_date** | **str**| Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 | [optional] 
  **plugin_name** | **str**| Please provide name of the plugin (applicable to 3PV only)  | [optional] 
@@ -66,6 +69,7 @@ Name | Type | Description  | Notes
  **webstore_platform_version** | **str**| Please provide version of the webstore platform (applicable to 3PV only)  | [optional] 
  **strict_validation** | **bool**| If set to true, indicate strict DCT validation of address details, and validation of product and service(s) combination provided in request. | [optional] [default to false]
  **bypass_plt_error** | **bool**| Option to bypass PLT - WY service code lane capability validation  | [optional] 
+ **validate_data_only** | **bool**| If set to true, indicate to perform shipment data compliant validation on the shipment information. | [optional] [default to false]
 
 ### Return type
 
@@ -83,11 +87,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **exp_api_shipments_documentimage**
-> SupermodelIoLogisticsExpressDocumentImageResponse exp_api_shipments_documentimage(shipment_tracking_number, shipper_account_number, type_code, pickup_year_and_month, encoding_format=encoding_format, all_in_one_pdf=all_in_one_pdf, compressed_package=compressed_package, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+> SupermodelIoLogisticsExpressDocumentImageResponse exp_api_shipments_documentimage(shipment_tracking_number, shipper_account_number, type_code, pickup_year_and_month, x_version, encoding_format=encoding_format, all_in_one_pdf=all_in_one_pdf, compressed_package=compressed_package, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
 
 Get Image
 
-The Get Image service can be used to retrieve customer's own uploaded Commercial Invoice, Waybill Document  or supporting documents that uploaded during shipment creation.  
+The Get Image service can be used to retrieve customer's own uploaded or DHL generated Commercial Invoice, Waybill Document or other supporting documents that was uploaded during shipment creation. 
 
 ### Example
 ```python
@@ -107,6 +111,7 @@ shipment_tracking_number = 'shipment_tracking_number_example' # str | DHL Expres
 shipper_account_number = 'shipper_account_number_example' # str | DHL Express customer shipper account number
 type_code = 'type_code_example' # str | Please provide correct document type.
 pickup_year_and_month = 'pickup_year_and_month_example' # str | Please provide the pickup's date in YYYY-MM format 
+x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 encoding_format = 'encoding_format_example' # str | Please provide the document image encoding format in pdf or tiff format  (optional)
 all_in_one_pdf = true # bool | Option to return all the document images in a single PDF file  (optional)
 compressed_package = true # bool | Option to return all the document images in a compressed package  (optional)
@@ -121,7 +126,7 @@ webstore_platform_version = 'webstore_platform_version_example' # str | Please p
 
 try:
     # Get Image
-    api_response = api_instance.exp_api_shipments_documentimage(shipment_tracking_number, shipper_account_number, type_code, pickup_year_and_month, encoding_format=encoding_format, all_in_one_pdf=all_in_one_pdf, compressed_package=compressed_package, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+    api_response = api_instance.exp_api_shipments_documentimage(shipment_tracking_number, shipper_account_number, type_code, pickup_year_and_month, x_version, encoding_format=encoding_format, all_in_one_pdf=all_in_one_pdf, compressed_package=compressed_package, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ShipmentApi->exp_api_shipments_documentimage: %s\n" % e)
@@ -135,6 +140,7 @@ Name | Type | Description  | Notes
  **shipper_account_number** | **str**| DHL Express customer shipper account number | 
  **type_code** | **str**| Please provide correct document type. | 
  **pickup_year_and_month** | **str**| Please provide the pickup&#x27;s date in YYYY-MM format  | 
+ **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **encoding_format** | **str**| Please provide the document image encoding format in pdf or tiff format  | [optional] 
  **all_in_one_pdf** | **bool**| Option to return all the document images in a single PDF file  | [optional] 
  **compressed_package** | **bool**| Option to return all the document images in a compressed package  | [optional] 
@@ -163,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **exp_api_shipments_epod**
-> SupermodelIoLogisticsExpressEPODResponse exp_api_shipments_epod(shipment_tracking_number, shipper_account_number=shipper_account_number, content=content, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+> SupermodelIoLogisticsExpressEPODResponse exp_api_shipments_epod(shipment_tracking_number, x_version, shipper_account_number=shipper_account_number, content=content, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
 
 Electronic Proof of Delivery
 
@@ -184,6 +190,7 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = swagger_client.ShipmentApi(swagger_client.ApiClient(configuration))
 shipment_tracking_number = 'shipment_tracking_number_example' # str | DHL Express shipment identification number
+x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 shipper_account_number = 'shipper_account_number_example' # str | DHL Express customer shipper account number (optional)
 content = 'epod-summary' # str |  (optional) (default to epod-summary)
 message_reference = 'message_reference_example' # str | Please provide message reference  (optional)
@@ -197,7 +204,7 @@ webstore_platform_version = 'webstore_platform_version_example' # str | Please p
 
 try:
     # Electronic Proof of Delivery
-    api_response = api_instance.exp_api_shipments_epod(shipment_tracking_number, shipper_account_number=shipper_account_number, content=content, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+    api_response = api_instance.exp_api_shipments_epod(shipment_tracking_number, x_version, shipper_account_number=shipper_account_number, content=content, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ShipmentApi->exp_api_shipments_epod: %s\n" % e)
@@ -208,6 +215,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_tracking_number** | **str**| DHL Express shipment identification number | 
+ **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **shipper_account_number** | **str**| DHL Express customer shipper account number | [optional] 
  **content** | **str**|  | [optional] [default to epod-summary]
  **message_reference** | **str**| Please provide message reference  | [optional] 
@@ -235,7 +243,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **exp_api_shipments_img_upload**
-> exp_api_shipments_img_upload(body, shipment_tracking_number)
+> exp_api_shipments_img_upload(body, x_version, shipment_tracking_number)
 
 Upload Paperless Trade shipment (PLT) images of previously created shipment.
 
@@ -256,11 +264,12 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = swagger_client.ShipmentApi(swagger_client.ApiClient(configuration))
 body = swagger_client.SupermodelIoLogisticsExpressImageUploadRequest() # SupermodelIoLogisticsExpressImageUploadRequest | Details about the shipment images
+x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 shipment_tracking_number = 'shipment_tracking_number_example' # str | DHL Express shipment identification number
 
 try:
     # Upload Paperless Trade shipment (PLT) images of previously created shipment.
-    api_instance.exp_api_shipments_img_upload(body, shipment_tracking_number)
+    api_instance.exp_api_shipments_img_upload(body, x_version, shipment_tracking_number)
 except ApiException as e:
     print("Exception when calling ShipmentApi->exp_api_shipments_img_upload: %s\n" % e)
 ```
@@ -270,6 +279,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**SupermodelIoLogisticsExpressImageUploadRequest**](SupermodelIoLogisticsExpressImageUploadRequest.md)| Details about the shipment images | 
+ **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **shipment_tracking_number** | **str**| DHL Express shipment identification number | 
 
 ### Return type
@@ -288,7 +298,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **exp_api_shipments_invoice_data_awb**
-> exp_api_shipments_invoice_data_awb(body, shipment_tracking_number, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+> exp_api_shipments_invoice_data_awb(body, x_version, shipment_tracking_number, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
 
 Upload Commercial Invoice data for your DHL Express shipment
 
@@ -309,6 +319,7 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = swagger_client.ShipmentApi(swagger_client.ApiClient(configuration))
 body = swagger_client.SupermodelIoLogisticsExpressUploadInvoiceDataRequest() # SupermodelIoLogisticsExpressUploadInvoiceDataRequest | Details about the invoice data
+x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 shipment_tracking_number = 'shipment_tracking_number_example' # str | DHL Express shipment identification number
 message_reference = 'message_reference_example' # str | Please provide message reference  (optional)
 message_reference_date = 'message_reference_date_example' # str | Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 (optional)
@@ -321,7 +332,7 @@ webstore_platform_version = 'webstore_platform_version_example' # str | Please p
 
 try:
     # Upload Commercial Invoice data for your DHL Express shipment
-    api_instance.exp_api_shipments_invoice_data_awb(body, shipment_tracking_number, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+    api_instance.exp_api_shipments_invoice_data_awb(body, x_version, shipment_tracking_number, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
 except ApiException as e:
     print("Exception when calling ShipmentApi->exp_api_shipments_invoice_data_awb: %s\n" % e)
 ```
@@ -331,6 +342,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**SupermodelIoLogisticsExpressUploadInvoiceDataRequest**](SupermodelIoLogisticsExpressUploadInvoiceDataRequest.md)| Details about the invoice data | 
+ **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **shipment_tracking_number** | **str**| DHL Express shipment identification number | 
  **message_reference** | **str**| Please provide message reference  | [optional] 
  **message_reference_date** | **str**| Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 | [optional] 

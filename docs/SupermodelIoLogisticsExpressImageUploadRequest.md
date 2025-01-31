@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**shipment_tracking_number** | **str** | Please provide Shipment Identification number (AWB number) | 
 **original_planned_shipping_date** | **str** |  | 
 **accounts** | [**list[SupermodelIoLogisticsExpressAccount]**](SupermodelIoLogisticsExpressAccount.md) | Please enter all the DHL Express accounts and types to be used for this shipment | 
 **product_code** | **str** | Please enter DHL Express Global Product code | 

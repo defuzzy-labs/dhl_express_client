@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**planned_shipping_date_and_time** | **str** | Identifies the date and time the package is tendered. Both the date and time portions of the string are expected to be used. The date should not be a past date or a date more than 10 days in the future. The time is the local time of the shipment based on the shipper&#x27;s time zone. The date component must be in the format: YYYY-MM-DD; the time component must be in the format: HH:MM:SS using a 24 hour clock. The date and time parts are separated by the letter T (e.g. 2006-06-26T17:00:00 GMT+01:00). | 
+**planned_shipping_date_and_time** | **str** | Identifies the date and time the package is tendered. Both the date and time portions of the string are expected to be used. The date should not be in the past or more than 10 days in the future. The time represents the local time of the shipment origin coupled with corresponding time zone. The date component must be in the format: YYYY-MM-DD; the time component must be in the format: HH:MM:SS using a 24-hour clock. The date and time parts are separated by the letter T (e.g., 2025-01-18T17:00:00 GMT+01:00). It is not recommended to populate this field with current time, the time the request is sent to DHL Express as it may be evaluated as being in the past the time it is received. | 
 **pickup** | [**Pickup**](Pickup.md) |  | 
 **product_code** | **str** | Please enter DHL Express Global Product code | 
 **local_product_code** | **str** | Please enter DHL Express Local Product code. Important when shipping domestic products. | [optional] 

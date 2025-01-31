@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**exp_api_address_validate**](AddressApi.md#exp_api_address_validate) | **GET** /address-validate | Validate DHL Express pickup/delivery capabilities at origin/destination
 
 # **exp_api_address_validate**
-> SupermodelIoLogisticsExpressAddressValidateResponse exp_api_address_validate(type, country_code, postal_code=postal_code, city_name=city_name, county_name=county_name, strict_validation=strict_validation, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+> SupermodelIoLogisticsExpressAddressValidateResponse exp_api_address_validate(type, country_code, x_version, postal_code=postal_code, city_name=city_name, county_name=county_name, strict_validation=strict_validation, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
 
 Validate DHL Express pickup/delivery capabilities at origin/destination
 
@@ -29,6 +29,7 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = swagger_client.AddressApi(swagger_client.ApiClient(configuration))
 type = 'type_example' # str | 
 country_code = 'country_code_example' # str | A short text string code (see values defined in ISO 3166) specifying the shipment origin country. https://gs1.org/voc/Country, Alpha-2 Code
+x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 postal_code = 'postal_code_example' # str | Text specifying the postal code for an address. https://gs1.org/voc/postalCode (optional)
 city_name = 'city_name_example' # str | Text specifying the city name (optional)
 county_name = 'county_name_example' # str | Text specifying the county name (optional)
@@ -44,7 +45,7 @@ webstore_platform_version = 'webstore_platform_version_example' # str | Please p
 
 try:
     # Validate DHL Express pickup/delivery capabilities at origin/destination
-    api_response = api_instance.exp_api_address_validate(type, country_code, postal_code=postal_code, city_name=city_name, county_name=county_name, strict_validation=strict_validation, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+    api_response = api_instance.exp_api_address_validate(type, country_code, x_version, postal_code=postal_code, city_name=city_name, county_name=county_name, strict_validation=strict_validation, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AddressApi->exp_api_address_validate: %s\n" % e)
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **type** | **str**|  | 
  **country_code** | **str**| A short text string code (see values defined in ISO 3166) specifying the shipment origin country. https://gs1.org/voc/Country, Alpha-2 Code | 
+ **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **postal_code** | **str**| Text specifying the postal code for an address. https://gs1.org/voc/postalCode | [optional] 
  **city_name** | **str**| Text specifying the city name | [optional] 
  **county_name** | **str**| Text specifying the county name | [optional] 

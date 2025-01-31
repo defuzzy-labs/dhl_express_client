@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**delivery_type_code** | **str** | Delivery Date capabilities considering customs clearance days.&lt;BR&gt;                QDDF - is the fastest (\&quot;docs\&quot;) transit time as quoted to the customer at booking or shipment creation. No custom clearance is considered.&lt;BR&gt;                QDDC - constitutes DHL&#x27;s service commitment as quoted at booking/shipment creation. QDDc builds in clearance time, and potentially other special operational non-transport component(s), when relevant. | [optional] 
+**delivery_type_code** | **str** | Delivery Date capabilities considering customs clearance days. Estimated Delivery Date Type. QDDF: is the fastest transit time as quoted to the customer at booking or shipment creation. When clearance or any other non-transport operational component is expected to impact transit time, QDDF does not constitute DHL&#x27;s service commitment. QDDC: cconstitutes DHL&#x27;s service commitment as quoted at booking or shipment creation. QDDC builds in clearance time, and potentially other special operational non-transport component(s), when relevant.  | [optional] 
 **estimated_delivery_date_and_time** | **str** | This is the estimated date/time the shipment will be delivered by for the rated shipment and product listed | [optional] 
 **destination_service_area_code** | **str** | The DHL Service Area Code for the destination of the Shipment | [optional] 
 **destination_facility_area_code** | **str** | The DHL Facility Code for the Destination | [optional] 

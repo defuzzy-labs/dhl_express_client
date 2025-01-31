@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **delivery_option** | **str** | Please choose from one of the delivery options | 
 **location** | **str** | If delivery option is signatureDelivery please specify location where to leave the shipment | [optional] 
-**special_instructions** | **str** | Please enter additional information that might be useful for the DHL Express courier | [optional] 
+**special_instructions** | **str** | Please enter additional information that might be useful for the DHL Express courier. This field is conditionally mandatory if selected location is &#x27;Other&#x27;. | [optional] 
 **gate_code** | **str** | Please provide entry code to gain access to an apartment complex or gate | [optional] 
 **where_to_leave** | **str** | In ase your deliveryOption is &#x27;neighbour&#x27; please specify where to leave the package  | [optional] 
 **neighbour_name** | **str** | In case you wish to leave the package with neighbour please provide the neighbour&#x27;s name | [optional] 

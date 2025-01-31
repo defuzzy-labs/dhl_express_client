@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**exp_api_rates_many**](RatingApi.md#exp_api_rates_many) | **POST** /rates | Retrieve Rates for Multi-piece Shipments
 
 # **exp_api_landed_cost**
-> SupermodelIoLogisticsExpressRates exp_api_landed_cost(body, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+> SupermodelIoLogisticsExpressRates exp_api_landed_cost(body, x_version, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
 
 Landed Cost
 
@@ -30,6 +30,7 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = swagger_client.RatingApi(swagger_client.ApiClient(configuration))
 body = swagger_client.SupermodelIoLogisticsExpressLandedCostRequest() # SupermodelIoLogisticsExpressLandedCostRequest | Details about the requested shipment
+x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 message_reference = 'message_reference_example' # str | Please provide message reference  (optional)
 message_reference_date = 'message_reference_date_example' # str | Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 (optional)
 plugin_name = 'plugin_name_example' # str | Please provide name of the plugin (applicable to 3PV only)  (optional)
@@ -41,7 +42,7 @@ webstore_platform_version = 'webstore_platform_version_example' # str | Please p
 
 try:
     # Landed Cost
-    api_response = api_instance.exp_api_landed_cost(body, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+    api_response = api_instance.exp_api_landed_cost(body, x_version, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RatingApi->exp_api_landed_cost: %s\n" % e)
@@ -52,6 +53,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**SupermodelIoLogisticsExpressLandedCostRequest**](SupermodelIoLogisticsExpressLandedCostRequest.md)| Details about the requested shipment | 
+ **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **message_reference** | **str**| Please provide message reference  | [optional] 
  **message_reference_date** | **str**| Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 | [optional] 
  **plugin_name** | **str**| Please provide name of the plugin (applicable to 3PV only)  | [optional] 
@@ -77,7 +79,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **exp_api_rates**
-> SupermodelIoLogisticsExpressRates exp_api_rates(account_number, origin_country_code, origin_city_name, destination_country_code, destination_city_name, weight, length, width, height, planned_shipping_date, is_customs_declarable, unit_of_measurement, origin_postal_code=origin_postal_code, destination_postal_code=destination_postal_code, next_business_day=next_business_day, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation, get_all_value_added_services=get_all_value_added_services, request_estimated_delivery_date=request_estimated_delivery_date, estimated_delivery_date_type=estimated_delivery_date_type)
+> SupermodelIoLogisticsExpressRates exp_api_rates(account_number, origin_country_code, origin_city_name, destination_country_code, destination_city_name, weight, length, width, height, planned_shipping_date, is_customs_declarable, unit_of_measurement, x_version, origin_postal_code=origin_postal_code, destination_postal_code=destination_postal_code, next_business_day=next_business_day, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation, get_all_value_added_services=get_all_value_added_services, request_estimated_delivery_date=request_estimated_delivery_date, estimated_delivery_date_type=estimated_delivery_date_type)
 
 Retrieve Rates for a one piece Shipment
 
@@ -109,6 +111,7 @@ height = 1.2 # float | Total height of the shipment including packaging.
 planned_shipping_date = 'planned_shipping_date_example' # str | Timestamp represents the date you plan to ship your prospected shipment 
 is_customs_declarable = true # bool | 
 unit_of_measurement = 'unit_of_measurement_example' # str | The UnitOfMeasurement node conveys the unit of measurements used in the operation. This single value corresponds to the units of weight and measurement which are used throughout the message processing. 
+x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 origin_postal_code = 'origin_postal_code_example' # str | Text specifying the postal code for an address. https://gs1.org/voc/postalCode (optional)
 destination_postal_code = 'destination_postal_code_example' # str | Text specifying the postal code for an address. https://gs1.org/voc/postalCode (optional)
 next_business_day = true # bool | When set to true and there are no products available for given plannedShippingDate then products available for the next possible pickup date are returned  (optional)
@@ -123,11 +126,11 @@ webstore_platform_version = 'webstore_platform_version_example' # str | Please p
 strict_validation = false # bool | If set to true, indicate strict DCT validation of address details, and validation of product and service(s) combination provided in request. (optional) (default to false)
 get_all_value_added_services = false # bool | Option to return list of all value added services and its rule groups if applicable (optional) (default to false)
 request_estimated_delivery_date = true # bool | Option to return Estimated Delivery Date in response (optional) (default to true)
-estimated_delivery_date_type = 'QDDF' # str | Estimated Delivery Date Type. QDDF: is the fastest 'docs' transit time as quoted to the customer at booking or shipment creation. No custom clearance is considered. QDDC: constitutes DHL's service commitment as quoted at booking or shipment creation. QDDc builds in clearance time, and potentially other special perational non-transport component(s), when relevant.  (optional) (default to QDDF)
+estimated_delivery_date_type = 'QDDF' # str | Estimated Delivery Date Type. QDDF: is the fastest transit time as quoted to the customer at booking or shipment creation. When clearance or any other non-transport operational component is expected to impact transit time, QDDF does not constitute DHL's service commitment. QDDC: cconstitutes DHL's service commitment as quoted at booking or shipment creation. QDDC builds in clearance time, and potentially other special operational non-transport component(s), when relevant.  (optional) (default to QDDF)
 
 try:
     # Retrieve Rates for a one piece Shipment
-    api_response = api_instance.exp_api_rates(account_number, origin_country_code, origin_city_name, destination_country_code, destination_city_name, weight, length, width, height, planned_shipping_date, is_customs_declarable, unit_of_measurement, origin_postal_code=origin_postal_code, destination_postal_code=destination_postal_code, next_business_day=next_business_day, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation, get_all_value_added_services=get_all_value_added_services, request_estimated_delivery_date=request_estimated_delivery_date, estimated_delivery_date_type=estimated_delivery_date_type)
+    api_response = api_instance.exp_api_rates(account_number, origin_country_code, origin_city_name, destination_country_code, destination_city_name, weight, length, width, height, planned_shipping_date, is_customs_declarable, unit_of_measurement, x_version, origin_postal_code=origin_postal_code, destination_postal_code=destination_postal_code, next_business_day=next_business_day, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation, get_all_value_added_services=get_all_value_added_services, request_estimated_delivery_date=request_estimated_delivery_date, estimated_delivery_date_type=estimated_delivery_date_type)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RatingApi->exp_api_rates: %s\n" % e)
@@ -149,6 +152,7 @@ Name | Type | Description  | Notes
  **planned_shipping_date** | **str**| Timestamp represents the date you plan to ship your prospected shipment  | 
  **is_customs_declarable** | **bool**|  | 
  **unit_of_measurement** | **str**| The UnitOfMeasurement node conveys the unit of measurements used in the operation. This single value corresponds to the units of weight and measurement which are used throughout the message processing.  | 
+ **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **origin_postal_code** | **str**| Text specifying the postal code for an address. https://gs1.org/voc/postalCode | [optional] 
  **destination_postal_code** | **str**| Text specifying the postal code for an address. https://gs1.org/voc/postalCode | [optional] 
  **next_business_day** | **bool**| When set to true and there are no products available for given plannedShippingDate then products available for the next possible pickup date are returned  | [optional] 
@@ -163,7 +167,7 @@ Name | Type | Description  | Notes
  **strict_validation** | **bool**| If set to true, indicate strict DCT validation of address details, and validation of product and service(s) combination provided in request. | [optional] [default to false]
  **get_all_value_added_services** | **bool**| Option to return list of all value added services and its rule groups if applicable | [optional] [default to false]
  **request_estimated_delivery_date** | **bool**| Option to return Estimated Delivery Date in response | [optional] [default to true]
- **estimated_delivery_date_type** | **str**| Estimated Delivery Date Type. QDDF: is the fastest &#x27;docs&#x27; transit time as quoted to the customer at booking or shipment creation. No custom clearance is considered. QDDC: constitutes DHL&#x27;s service commitment as quoted at booking or shipment creation. QDDc builds in clearance time, and potentially other special perational non-transport component(s), when relevant.  | [optional] [default to QDDF]
+ **estimated_delivery_date_type** | **str**| Estimated Delivery Date Type. QDDF: is the fastest transit time as quoted to the customer at booking or shipment creation. When clearance or any other non-transport operational component is expected to impact transit time, QDDF does not constitute DHL&#x27;s service commitment. QDDC: cconstitutes DHL&#x27;s service commitment as quoted at booking or shipment creation. QDDC builds in clearance time, and potentially other special operational non-transport component(s), when relevant.  | [optional] [default to QDDF]
 
 ### Return type
 
@@ -181,7 +185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **exp_api_rates_many**
-> SupermodelIoLogisticsExpressRates exp_api_rates_many(body, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation)
+> SupermodelIoLogisticsExpressRates exp_api_rates_many(body, x_version, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation)
 
 Retrieve Rates for Multi-piece Shipments
 
@@ -202,6 +206,7 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = swagger_client.RatingApi(swagger_client.ApiClient(configuration))
 body = swagger_client.SupermodelIoLogisticsExpressRateRequest() # SupermodelIoLogisticsExpressRateRequest | Details about the requested shipment
+x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 message_reference = 'message_reference_example' # str | Please provide message reference  (optional)
 message_reference_date = 'message_reference_date_example' # str | Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 (optional)
 plugin_name = 'plugin_name_example' # str | Please provide name of the plugin (applicable to 3PV only)  (optional)
@@ -214,7 +219,7 @@ strict_validation = false # bool | If set to true, indicate strict DCT validatio
 
 try:
     # Retrieve Rates for Multi-piece Shipments
-    api_response = api_instance.exp_api_rates_many(body, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation)
+    api_response = api_instance.exp_api_rates_many(body, x_version, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version, strict_validation=strict_validation)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RatingApi->exp_api_rates_many: %s\n" % e)
@@ -225,6 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**SupermodelIoLogisticsExpressRateRequest**](SupermodelIoLogisticsExpressRateRequest.md)| Details about the requested shipment | 
+ **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **message_reference** | **str**| Please provide message reference  | [optional] 
  **message_reference_date** | **str**| Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 | [optional] 
  **plugin_name** | **str**| Please provide name of the plugin (applicable to 3PV only)  | [optional] 

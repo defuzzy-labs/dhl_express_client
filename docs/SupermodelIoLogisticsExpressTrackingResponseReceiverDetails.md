@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | [optional] 
+**name** | **str** | Note: This field may be intentionally left empty in accordance with the General Data Protection Regulation (GDPR) requirements. | [optional] 
 **postal_address** | [**SupermodelIoLogisticsExpressTrackingResponseReceiverDetailsPostalAddress**](SupermodelIoLogisticsExpressTrackingResponseReceiverDetailsPostalAddress.md) |  | [optional] 
 **service_area** | [**list[SupermodelIoLogisticsExpressTrackingResponseReceiverDetailsServiceArea]**](SupermodelIoLogisticsExpressTrackingResponseReceiverDetailsServiceArea.md) |  | [optional] 
 

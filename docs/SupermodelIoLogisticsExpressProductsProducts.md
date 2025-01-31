@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**product_name** | **str** | Name of the DHL Express product | [optional] 
+**product_name** | **str** | DHL Express product - Global Product Name | [optional] 
 **product_code** | **str** | This is the global DHL Express product code for which the delivery is feasible respecting the input data from the request. | [optional] 
 **local_product_code** | **str** | This is the local DHL Express product code for which the delivery is feasible respecting the input data from the request. | [optional] 
 **local_product_country_code** | **str** | The country code for the local service used | [optional] 
