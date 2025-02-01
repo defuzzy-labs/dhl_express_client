@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **number** | **str** | Please enter commercial invoice number | 
-**_date** | **date** | Please enter accurate date when the invoice was issued at as that is what drives the exchange rate calculation during customs clearance process (where applicable). | 
+**_date** | **date** | Please enter commercial invoice date | 
 **signature_name** | **str** | Please enter who has signed the invoce | [optional] 
 **signature_title** | **str** | Please provide title of person who has signed the invoice | [optional] 
 **signature_image** | **str** | Please provide the signature image | [optional] 
@@ -15,7 +15,6 @@ Name | Type | Description | Notes
 **customer_references** | [**list[SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationInvoiceCustomerReferences]**](SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationInvoiceCustomerReferences.md) | Please provide the customer references at invoice level. It is recommended to provide less than 20 customer references of &#x27;MRN&#x27; type code. | [optional] 
 **terms_of_payment** | **str** | Please provide the terms of payment | [optional] 
 **indicative_customs_values** | [**SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationInvoiceIndicativeCustomsValues**](SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationInvoiceIndicativeCustomsValues.md) |  | [optional] 
-**pre_calculated_total_values** | [**SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationInvoicePreCalculatedTotalValues**](SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationInvoicePreCalculatedTotalValues.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

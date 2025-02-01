@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **recipient_reference** | **str** | Please enter recipient reference | [optional] 
 **exporter** | [**SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationExporter**](SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationExporter.md) |  | [optional] 
 **package_marks** | **str** | Please enter package marks | [optional] 
-**declaration_notes** | [**list[SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationDeclarationNotes]**](SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationDeclarationNotes.md) | Please provide up to three declaration notes | [optional] 
+**declaration_notes** | [**list[SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationDeclarationNotes]**](SupermodelIoLogisticsExpressCreateShipmentRequestContentExportDeclarationDeclarationNotes.md) | Please provide up to three dcelaration notes | [optional] 
 **export_reference** | **str** | Please enter export reference | [optional] 
 **export_reason** | **str** | Please enter export reason | [optional] 
 **export_reason_type** | **str** | Please provide the reason for export | [optional] 

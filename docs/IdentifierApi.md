@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**exp_api_identifiers**](IdentifierApi.md#exp_api_identifiers) | **GET** /identifiers | Service to allocate identifiers upfront for DHL Express Breakbulk or Loose Break Bulk shipments
 
 # **exp_api_identifiers**
-> SupermodelIoLogisticsExpressIdentifierResponse exp_api_identifiers(account_number, type, size, x_version, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+> SupermodelIoLogisticsExpressIdentifierResponse exp_api_identifiers(account_number, type, size, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
 
 Service to allocate identifiers upfront for DHL Express Breakbulk or Loose Break Bulk shipments
 
@@ -30,7 +30,6 @@ api_instance = swagger_client.IdentifierApi(swagger_client.ApiClient(configurati
 account_number = 'account_number_example' # str | DHL Express customer account number
 type = 'type_example' # str | Type of DHL Express identifier to retrieve
 size = 'size_example' # str | Number of identifiers to be retrieved
-x_version = '2.12.0' # str | Interface version - do not change this field value  (default to 2.12.0)
 message_reference = 'message_reference_example' # str | Please provide message reference  (optional)
 message_reference_date = 'message_reference_date_example' # str | Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 (optional)
 plugin_name = 'plugin_name_example' # str | Please provide name of the plugin (applicable to 3PV only)  (optional)
@@ -42,7 +41,7 @@ webstore_platform_version = 'webstore_platform_version_example' # str | Please p
 
 try:
     # Service to allocate identifiers upfront for DHL Express Breakbulk or Loose Break Bulk shipments
-    api_response = api_instance.exp_api_identifiers(account_number, type, size, x_version, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
+    api_response = api_instance.exp_api_identifiers(account_number, type, size, message_reference=message_reference, message_reference_date=message_reference_date, plugin_name=plugin_name, plugin_version=plugin_version, shipping_system_platform_name=shipping_system_platform_name, shipping_system_platform_version=shipping_system_platform_version, webstore_platform_name=webstore_platform_name, webstore_platform_version=webstore_platform_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IdentifierApi->exp_api_identifiers: %s\n" % e)
@@ -55,7 +54,6 @@ Name | Type | Description  | Notes
  **account_number** | **str**| DHL Express customer account number | 
  **type** | **str**| Type of DHL Express identifier to retrieve | 
  **size** | **str**| Number of identifiers to be retrieved | 
- **x_version** | **str**| Interface version - do not change this field value  | [default to 2.12.0]
  **message_reference** | **str**| Please provide message reference  | [optional] 
  **message_reference_date** | **str**| Optional reference date in the  HTTP-date format https://tools.ietf.org/html/rfc7231#section-7.1.1.2 | [optional] 
  **plugin_name** | **str**| Please provide name of the plugin (applicable to 3PV only)  | [optional] 

@@ -10,9 +10,7 @@ Name | Type | Description | Notes
 **exporter_details** | [**SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsExporterDetails**](SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsExporterDetails.md) |  | [optional] 
 **seller_details** | [**SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsSellerDetails**](SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsSellerDetails.md) |  | [optional] 
 **payer_details** | [**SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsPayerDetails**](SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsPayerDetails.md) |  | [optional] 
-**manufacturer_details** | [**SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsManufacturerDetails**](SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsManufacturerDetails.md) |  | [optional] 
 **ultimate_consignee_details** | [**SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsUltimateConsigneeDetails**](SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsUltimateConsigneeDetails.md) |  | [optional] 
-**broker_details** | [**SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsBrokerDetails**](SupermodelIoLogisticsExpressCreateShipmentRequestCustomerDetailsBrokerDetails.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

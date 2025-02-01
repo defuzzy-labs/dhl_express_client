@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **label_barcodes** | [**list[SupermodelIoLogisticsExpressPackageLabelBarcodes]**](SupermodelIoLogisticsExpressPackageLabelBarcodes.md) | This allows you to define up to two bespoke barcodes on the DHL Express Tranport label. To use this feature please set outputImageProperties/imageOptions/templateName as ECOM26_84CI_003 for typeCode&#x3D;label | [optional] 
 **label_text** | [**list[SupermodelIoLogisticsExpressPackageLabelText]**](SupermodelIoLogisticsExpressPackageLabelText.md) | This allows you to enter up to two bespoke texts on the DHL Express Tranport label. To use this feature please set outputImageProperties/imageOptions/templateName as ECOM26_84CI_003 for typeCode&#x3D;label | [optional] 
 **label_description** | **str** | Please enter additional customer description | [optional] 
-**reference_number** | **float** | Please enter package reference number. If package reference number is provided for at least one package, then package reference number must be provided for all packages. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
